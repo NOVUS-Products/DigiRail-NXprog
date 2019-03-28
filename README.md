@@ -1,6 +1,6 @@
-At this repository can be found some usefull information about NOVUS DigiRail NXprog, like user guides, examples and the novus.zip to donwload.
+At this repository can be found some usefull information about NOVUS DigiRail NXprog, like user guide, examples and the novus.zip to donwload.
 
-The user guide is provided in portuguese and a short version in english. At the first option you will find a complete description on how DigiRail NXprog works: Hardware definitions, all possible functions to use explained in details and the examples provided with a briefly description. The Brief User Guide only shows the functions that can be used.
+The user guide is a short version in english, which only shows the functions that can be used and a resume of how to use DigiRail NXprog.
 
 In there, you can find all examples provided to use in DigiRail NXprog, with a shortly resume about each one.
 
