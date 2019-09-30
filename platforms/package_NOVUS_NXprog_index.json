@@ -1,0 +1,39 @@
+{
+   "packages":[
+      {
+         "name":"NXprog Arduino",
+         "maintainer":"NOVUS Automation",
+         "websiteURL":"https://www.novusautomation.com/",
+         "email":"support@novusautomation.com",
+         "platforms":[
+            {
+               "name":"NOVUS DigiRail NXprog DO/RL ETH",
+               "architecture":"megaavr",
+               "version":"1.0",
+               "category":"Contributed",
+               "url":"https://github.com/NOVUS-Products/DigiRail-NXprog/raw/master/platforms/NXprog-platform-V1.00.zip",
+               "archiveFileName":"NXprog-platform-V1.00.zip",
+               "checksum":"SHA-256:58CC930CD564FA71B6952301BD50104D83D0D488610BDCE05155CD2BCBC12D85",
+               "size":"412534",
+               "boards":[
+                  {
+                     "name":"NXprog RAMIX DO/RL ETH"
+                  }
+               ],
+               "toolsDependencies":[
+                  {
+                     "packager":"arduino",
+                     "name":"avr-gcc",
+                     "version":"7.3.0-atmel3.6.1-arduino5"
+                  },
+                  {
+                     "packager":"arduino",
+                     "name":"avrdude",
+                     "version":"6.3.0-arduino16"
+                  }
+               ]
+            }
+         ]
+      }
+   ]
+}

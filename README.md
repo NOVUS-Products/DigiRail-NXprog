@@ -27,10 +27,10 @@ The user guide is a short version in English, which only shows the functions tha
 
 1. The NOVUS NXprog Core requires Arduino IDE 1.6.7 or above (including 1.8.x).
 1. Download [Arduino Desktop IDE](https://www.arduino.cc/en/Main/Software)
-3. Follow the download and installation guidelines as described in [Install the Arduino Desktop IDE](<https://www.arduino.cc/en/Guide/HomePage>) 
+3. Follow the download and installation guidelines as described in [Install the Arduino Desktop IDE](https://www.arduino.cc/en/Guide/HomePage) 
 4. After installation in the Arduino IDE, click File->Preferences.
 5. Click the button next to Additional Boards Manager URLs.
-6. Add the reference to NOVUS platform definition https://raw.githubusercontent.com/NOVUS-Products/DigiRail-NXprog/master/platforms/NXprog.json
+6. Add the reference to NOVUS platform definition https://raw.githubusercontent.com/NOVUS-Products/DigiRail-NXprog/master/platforms/package_NOVUS_NXprog_index.json
 7. Save preferences, then open the Boards Manager.
 8. Install the NOVUS Arduino package.
 9. Close Boards Manager, then click Tools->Board->(choose board).
