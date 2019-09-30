@@ -11,9 +11,9 @@
                "architecture":"megaavr",
                "version":"1.0.0",
                "category":"Contributed",
-		"help": {
-			"online": "https://github.com/NOVUS-Products/DigiRail-NXprog/"
-		},			   
+               "help":{
+                  "online":"https://github.com/NOVUS-Products/DigiRail-NXprog/"
+               },
                "url":"https://github.com/NOVUS-Products/DigiRail-NXprog/raw/master/platforms/NXprog-platform-V1.0.0.zip",
                "archiveFileName":"NXprog-platform-V1.0.0.zip",
                "checksum":"SHA-256:58CC930CD564FA71B6952301BD50104D83D0D488610BDCE05155CD2BCBC12D85",
