@@ -1,15 +1,41 @@
-At this repository can be found some usefull information about NOVUS DigiRail NXprog, like user guide, examples and the novus.zip to donwload.
+## Installation
 
-The user guide is a short version in english, which only shows the functions that can be used and a resume of how to use DigiRail NXprog.
+### Driver Installation
 
-In there, you can find all examples provided to use in DigiRail NXprog, with a shortly resume about each one.
+#### Windows
 
-There are also a novus.zip, download and extract it in your folder C:\Program Files (x86)\Arduino\hardware.
+1. Download https://github/signed_drivers and unzip into any folder.
+   Note that the Windows 10 generic CDC drivers work as well.
+1. Plug in the NXprog.
+1. Windows will detect the board. 
 
-How to Use: 
+#### Linux
 
-	Download the lastest version of Arduinos IDE, extract novus.zip to the specified folder above, open Arduinos IDE, go into "Tools > Boards > NOVUS Boards > DigiRail NXprog" and it is ready to use.
+1. No driver installation is needed.
 
-	To upload libraries to the sketch go to "Sketch > include library > contributed libraries " and click in the desired one.
 
-	To open examples go to "File > examples > Examples for DigiRail NXprog " and click in the desired one.
+### NOVUS NXprog Core installation
+
+
+1. The NOVUS NXprog Core requires Arduino IDE 1.6.7 or above (including 1.8.x).
+1. In the Arduino IDE, click File->Preferences.
+1. Click the button next to Additional Boards Manager URLs.
+1. Add the reference to NOVUS platform definition https://github/package_novus.json.
+1. Save preferences, then open the Boards Manager.
+1. Install the NOVUS Arduino package.
+1. Close Boards Manager, then click Tools->Board->(choose board).
+1. Select the MCU with the now visible Tools->Microcontroller menu (if present).
+1. Plug in the NXprog.
+1. Click Tools->Port and choose the COM port. Note that the board indicated may not match the chosen board*
+1. You can now upload your own sketch.
+
+
+## Language reference
+The NXprog version Arduino programming language is an extension of standard [Arduino Language](https://www.arduino.cc/reference/en/) can be divided in three main parts: 
+* IO Functions
+	* [Standard Analog](./AnalogIO.md)
+	* [Expert IO](./ExpertAnalogIO.md)
+* Values 
+	* [Sensor Type](./SensorType.md)
+* Structures
+	* [Analog Configuration](./AnalogConfiguration.md)
