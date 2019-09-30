@@ -5,6 +5,9 @@
          "maintainer":"NOVUS Automation",
          "websiteURL":"https://www.novusautomation.com/",
          "email":"support@novusautomation.com",
+         "help": {
+            "online": "https://github.com/NOVUS-Products/DigiRail-NXprog/"
+         },
          "platforms":[
             {
                "name":"NOVUS DigiRail NXprog DO/RL ETH",
