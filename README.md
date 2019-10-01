@@ -3,7 +3,9 @@
 ## This repository
 This repository contains support files to use NOVUS DigiRail NXprog devices such as **NXprog RAMIX 2EA / 2SA / 4ED / 3SD ETH** and **NXprog RAMIX 2EA / 2SA / 4ED / 2RL ETH** with the Arduino IDE.
 
-The user guide is a short version in English, which only shows the functions that can be used and a resume of how to use DigiRail NXprog.
+![alt text](./images/RAMIX-DO.png "NXprog RAMIX DO")
+
+The user guide is a short version in English, which only shows the functions that can be used and a summary on how to use DigiRail NXprog.
 
 
 ## Installation
@@ -25,19 +27,21 @@ The user guide is a short version in English, which only shows the functions tha
 ### Installing NOVUS NXprog Core support in Arduino IDE 
 
 
-1. The NOVUS NXprog Core requires Arduino IDE 1.6.7 or above (including 1.8.x).
+1. The NOVUS NXprog Core requires Arduino IDE 1.8.6 or above.
 1. If not installed, download [Arduino Desktop IDE](https://www.arduino.cc/en/Main/Software)
-3. Follow the download and installation guidelines as described in [Install the Arduino Desktop IDE](https://www.arduino.cc/en/Guide/HomePage) 
-4. After installation, click File->Preferences in the Arduino IDE.
-5. Click the button next to Additional Boards Manager URLs.
-6. Add the reference to NOVUS platform definition https://raw.githubusercontent.com/NOVUS-Products/DigiRail-NXprog/master/platforms/package_NOVUS_NXprog_index.json
-7. Save preferences, then open the Boards Manager.
-8. Install the NOVUS Arduino package.
-9. Close Boards Manager, then click Tools->Board->(choose board).
-10. Select the MCU with the now visible Tools->Microcontroller menu (if present).
-11. Plug in the NXprog.
-12. Click Tools->Port and choose the COM port. Note that the board indicated may not match the chosen board*
-13. You can now upload your own sketch.
+1. Follow the download and installation guidelines as described in [Install the Arduino Desktop IDE](https://www.arduino.cc/en/Guide/HomePage) 
+1. After installation, click File->Preferences in the Arduino IDE. A window will appear like the one shown below:
+![alt text](./images/IDE-preferences.png "Arduino IDE Preferences") 
+3. Click the button next to Additional Boards Manager URLs.
+4. Add the reference to NOVUS platform definition
+   > https://raw.githubusercontent.com/NOVUS-Products/DigiRail-NXprog/master/platforms/package_NOVUS_NXprog_index.json
+6. Save preferences, then open the Boards Manager.
+7. Install the NOVUS Arduino package.
+8. Close Boards Manager, then click Tools->Board->(choose board).
+9. Select the MCU with the now visible Tools->Microcontroller menu (if present).
+10. Plug in the NXprog.
+11. Click Tools->Port and choose the COM port. Note that the board indicated may not match the chosen board*
+12. You can now upload your own sketch.
 
 
 ## Language reference
