@@ -1,7 +1,7 @@
 # DigiRail NXprog
 
 ## This repository
-This repository presents some useful information about NOVUS DigiRail NXprog, like user guide, examples and the *Board Manager* file to download.
+This repository contains support files to use NOVUS DigiRail NXprog devices such as **NXprog RAMIX 2EA / 2SA / 4ED / 3SD ETH** and **NXprog RAMIX 2EA / 2SA / 4ED / 2RL ETH** with the Arduino IDE.
 
 The user guide is a short version in English, which only shows the functions that can be used and a resume of how to use DigiRail NXprog.
 
@@ -22,13 +22,13 @@ The user guide is a short version in English, which only shows the functions tha
 1. No driver installation is needed.
 
 
-### NOVUS NXprog Core installation
+### Installing NOVUS NXprog Core support in Arduino IDE 
 
 
 1. The NOVUS NXprog Core requires Arduino IDE 1.6.7 or above (including 1.8.x).
-1. Download [Arduino Desktop IDE](https://www.arduino.cc/en/Main/Software)
+1. If not installed, download [Arduino Desktop IDE](https://www.arduino.cc/en/Main/Software)
 3. Follow the download and installation guidelines as described in [Install the Arduino Desktop IDE](https://www.arduino.cc/en/Guide/HomePage) 
-4. After installation in the Arduino IDE, click File->Preferences.
+4. After installation, click File->Preferences in the Arduino IDE.
 5. Click the button next to Additional Boards Manager URLs.
 6. Add the reference to NOVUS platform definition https://raw.githubusercontent.com/NOVUS-Products/DigiRail-NXprog/master/platforms/package_NOVUS_NXprog_index.json
 7. Save preferences, then open the Boards Manager.
