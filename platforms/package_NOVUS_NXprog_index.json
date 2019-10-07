@@ -51,9 +51,9 @@
              "online": "https://github.com/NOVUS-Products/DigiRail-NXprog"
            },
            "url": "https://github.com/NOVUS-Products/DigiRail-NXprog/raw/master/platforms/NXprog-platform-V1.0.1.zip",
-           "checksum": "SHA-256:A4F690B511CA30C9384BF6F6BD76E05C6BE36FD6EC129FF1A81870613DF600D7",
+           "checksum": "SHA-256:EC7B55FDF9EEC71E2D4E2E26BDCAE6D2F13B74FA1E68CA7F18E1080A2894FD61",
            "archiveFileName": "NXprog-platform-V1.0.1.zip",
-           "size": "408968",
+           "size": "413904",
            "name": "NXprog DO/RL ETH",
            "version": "1.0.1",
            "architecture": "megaavr",
