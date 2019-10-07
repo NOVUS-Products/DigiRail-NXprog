@@ -43,7 +43,41 @@
 				 "version":"6.3.0-arduino16"
 			  }
 		   ]
+         },
+         {
+           "category": "Contributed",
+           "help": 
+           {
+             "online": "https://github.com/NOVUS-Products/DigiRail-NXprog"
+           },
+           "url": "https://github.com/NOVUS-Products/DigiRail-NXprog/raw/master/platforms/NXprog-platform-V1.0.1.zip",
+           "checksum": "SHA-256:A4F690B511CA30C9384BF6F6BD76E05C6BE36FD6EC129FF1A81870613DF600D7",
+           "archiveFileName": "NXprog-platform-V1.0.1.zip",
+           "size": "408968",
+           "name": "NXprog DO/RL ETH",
+           "version": "1.0.1",
+           "architecture": "megaavr",
+           "boards": 
+           [
+             {
+               "name": "RAMIX DO/RL ETH"
+             }
+           ],
+           "toolsDependencies": 
+		   [
+			  { 
+				 "packager":"arduino",
+				 "name":"avr-gcc",
+				 "version":"7.3.0-atmel3.6.1-arduino5"
+			  },
+			  { 
+				 "packager":"arduino",
+				 "name":"avrdude",
+				 "version":"6.3.0-arduino16"
+			  }
+		   ]
          }
+		 
       ],
       "tools":[]
     }
