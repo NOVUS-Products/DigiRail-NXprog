@@ -76,7 +76,7 @@ Analog outputs have three types of signals:
 Allows you to set the operating range of the analog output:
 * **0.00 to 100.00 %**: The register that controls the analog output expects percentage values within the range 0 to 100 %. In an Arduino project, use the constant `_AOUT_RANGE_PERCENT` to select this input mode. When using this mode, the values used in function `analogWrite` are the percent value multiplied by 100 (e.g. 325 is 3.25%): 
     * 0: Corresponds to 0.00% that is the minimum value of the analog output (0 mA, 4 mA or 0 V). 
-    * 100: Corresponds to 100.00% that is the maximum value of the analog output (20 mA, 20 mA or 10 V).
+    * 10000 Corresponds to 100.00% that is the maximum value of the analog output (20 mA, 20 mA or 10 V).
 * **0 to 32 000**: The register that controls the analog output expects the 32 000 size. This is selected by the constant `_AOUT_RANGE_VALUE`. In function `analogWrite` the value input data ranges from:
     * 0: Corresponds to the minimum value of the analog output (0 mA, 4 mA or 0 V); to
     * 32000: Corresponds to the maximum value of the analog output (20 mA, 20 mA or 10 V). 
