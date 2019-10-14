@@ -22,7 +22,7 @@
            "archiveFileName": "NXprog-platform-V0.04.zip",
            "size": "415335",
            "name": "NXprog",
-           "version": "V0.04",
+           "version": "0.04",
            "architecture": "megaavr",
            "boards": 
            [
