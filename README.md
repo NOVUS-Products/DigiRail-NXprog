@@ -37,7 +37,7 @@ The user guide is a short version in English, which only shows the functions tha
 
 1. Click the button next to Additional Boards Manager URLs.
 1. Add the reference to NOVUS platform definition
-   > https://www.novusautomation.com/en/nxprog_package.json
+   > https://www.novusautomation.com/en/package_NOVUS_NXprog_index.json
 1. Save preferences, then open the Boards Manager.
 
 ![alt text](./pages/images/IDE-boardsmanager.png "Boards Manager") 
@@ -68,9 +68,9 @@ Although most standard functions have the same functionality, there are small di
 (see complete document at [Standard Digital I/O](./pages/DigitalIO.md))
 
 ***Analog I/O functions***
-  * [analogRead()](./pages/./pages/AnalogIO.md#analogread)
-  * [analogWrite()](./pages/./pages/AnalogIO.md#analogwrite)
-  * [analogReference()](./pages/./pages/AnalogIO.md#analogreference)
+  * [analogRead()](./pages/AnalogIO.md#analogread)
+  * [analogWrite()](./pages/AnalogIO.md#analogwrite)
+  * [analogReference()](./pages/AnalogIO.md#analogreference)
 
 (see complete document at [Standard Analog I/O](./pages/AnalogIO.md))
 
