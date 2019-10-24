@@ -39,10 +39,10 @@ NovusExpertDOut.setState(pin, enable)
 ### Parameters
 **pin**: `R1` to `R4` or `K1` to `K8` pin.
 
-**enable**: desired state. Data type: `bool`.
+**enable**: desired state. **Data type**: `bool`.
 
 ### Return
-This function returns `true` when executed successfully. Data type: `bool`.
+This function returns `true` when executed successfully. **Data type**: `bool`.
 
 ## setSafeState
 This function sets the condition to be adopted by the digital output when a command is interrupted due to a communication failure. The digital output will be enabled when this function succeeds.
@@ -55,10 +55,10 @@ NovusExpertDOut.setSafeState(pin, safe_state)
 ### Parameters
 **pin**: `R1` to `R4` or `K1` to `K8` pin.
 
-**safe_state**: desired state. Data type: `bool`.
+**safe_state**: desired state. **Data type**: `bool`.
 
 ### Return
-This function returns `true` when executed successfully. Data type: `bool`.
+This function returns `true` when executed successfully. **Data type**: `bool`.
 
 ## setPowerOnState
 It is the condition to be adopted by the digital output after the NXprog initialization and in which must remain until the receiving of a digital
@@ -76,7 +76,7 @@ NovusExpertDOut.setPowerOnState(pin, po_state)
 **po_state**: desired state. **Data type**: `nx_dout_poweron_state_t` as defined in [Power On State](./DigitalConfiguration.md/#Power-On-State). 
 
 ### Return
-This function returns `true` when executed successfully. Data type: `bool`.
+This function returns `true` when executed successfully. **Data type**: `bool`.
 
 ## enPulse
 Sets the digital output actuation modes.
@@ -98,7 +98,7 @@ NovusExpertDOut.enPulse(pin, opMode, pulseTime, pulsePeriod, nPulse)
 **nPulse**: number of pulses to be generate (see valid options in [Actuation mode](./DigitalConfiguration.md/#Actuation-mode)). **Data type**: `uint16_t`.
 
 ### Return
-This function returns `true` when executed successfully. Data type: `bool`.
+This function returns `true` when executed successfully. **Data type**: `bool`.
 
 ## enInstant
 Configure channel as digital output instant value.
@@ -118,7 +118,7 @@ NovusExpertDOut.enInstant(pin, po_state, safe_state)
 Please, refer to [DigitalConfiguration](./DigitalConfiguration.md) about digital output modes and parameters.
 
 ### Return
-This function returns `true` when executed successfully. Data type: `bool`.
+This function returns `true` when executed successfully. **Data type**: `bool`.
 
 ### Example code
 ```C

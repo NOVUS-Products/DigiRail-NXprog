@@ -41,9 +41,9 @@ NovusExpertAIn.setRange(pin, low, high)
 ### Parameters
 **pin**: `A1` or `A2` pin.
 
-**low**: Data type: `uint16_t`.
+**low**: **Data type**: `uint16_t`.
 
-**high**: Data type: `uint16_t`.
+**high**: **Data type**: `uint16_t`.
 
 ### Return
 This function returns `true` when executed successfully. It returns `false` when a communication error occurs when the pin is not an input or the input type is a temperature sensor. **Data type**: `bool`.
@@ -60,7 +60,7 @@ NovusExpertAIn.setUnit(pin, unit)
 ### Parameters
 **pin**: `A1` or `A2` pin.
 
-**unit**: temperature unit. Data type: `nx_ain_temp_unit_t`.
+**unit**: temperature unit. **Data type**: `nx_ain_temp_unit_t`. See [Temperature unit](./AnalogConfiguration.md/#temperature-unit) definitions.
 
 ### Return
 
@@ -78,7 +78,7 @@ NovusExpertAIn.enFilter(pin, time)
 ### Parameters
 **pin**: `A1` or `A2` pin.
 
-**time**: time constant between 0 and 1200. Data type: `int`.
+**time**: time constant between 0 and 1200. **Data type**: `int`.
 
 ### Return
 
@@ -96,7 +96,7 @@ NovusExpertAIn.setSamplingRate(pin, rate)
 ### Parameters
 **pin**: `A1` or `A2` pin.
 
-**rate**: sampling rate. Data type: `nx_ain_sampling_rate_t`,  as defined in [Sampling rate](./AnalogConfiguration.md/#Sampling-rate).
+**rate**: sampling rate. **Data type**: `nx_ain_sampling_rate_t`,  as defined in [Sampling rate](./AnalogConfiguration.md/#Sampling-rate).
 
 ### Return
 
@@ -115,7 +115,7 @@ NovusExpertAIn.setState(pin, enable)
 ### Parameters
 **pin**: `A1` or `A2` pin.
 
-**enable**: desired state for the pin. Data type: `bool`.
+**enable**: desired state for the pin. **Data type**: `bool`.
 
 ### Return
 This function returns `true` when executed successfully.

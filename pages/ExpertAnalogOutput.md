@@ -36,7 +36,7 @@ NovusExpertAIn.setState(pin, enable)
 ### Parameters
 **pin**: `O1` or `O2` pin.
 
-**enable**: desired state for the pin. Data type: `bool`.
+**enable**: desired state for the pin. **Data type**: `bool`.
 
 ### Return
 This function returns `true` when executed successfully.
@@ -53,7 +53,7 @@ NovusExpertAIn.setPowerOnValue(pin, value)
 ### Parameters
 **pin**: `O1` or `O2` pin.
 
-**value**: power on value for the pin. Data type: `uint16_t`.
+**value**: power on value for the pin. **Data type**: `uint16_t`.
 
 ### Return
 This function returns `true` when executed successfully.
@@ -70,7 +70,7 @@ NovusExpertAIn.setSafeValue(pin, value)
 ### Parameters
 **pin**: `O1` or `O2` pin.
 
-**value**: safe value for the pin. Data type: `uint16_t`.
+**value**: safe value for the pin. **Data type**: `uint16_t`.
 
 ### Return
 This function returns `true` when executed successfully. 
@@ -87,7 +87,7 @@ NovusExpertAIn.setPowerOnState(pin, value)
 
 **pin**: `O1` or `O2` pin.
 
-**value**: power on state the pin. Data type: `nx_aout_poweron_state_t`.  See the values defined for  [Power on state](./AnalogConfiguration.md#poweron-state).
+**value**: power on state the pin. **Data type**: `nx_aout_poweron_state_t`.  See the values defined for  [Power on state](./AnalogConfiguration.md#poweron-state).
 
 ### Return
 This function returns `true` when executed successfully. 

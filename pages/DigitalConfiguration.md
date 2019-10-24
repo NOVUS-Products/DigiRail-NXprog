@@ -74,6 +74,7 @@ In the table above, the value **n/u** indicates that this value is not used in t
 
 ### Power On State
  The initial state of the device's digital output after initializing the device until a command is acknowledged.
+ 
  State | Value | Comment
 --- | --- | ---
  Off | `PO_DOUT_OFF` | Allows the digital output to remain off (0) after device initialization.

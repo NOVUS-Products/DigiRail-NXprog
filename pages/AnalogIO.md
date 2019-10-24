@@ -16,9 +16,22 @@ analogRead(pin)
 **pin**: the name of the analog input pin to read from. In NXprog the pins are A1 and A2 as displayed in the NXprog front panel.
 
 ### Return
-The analog reading on the pin. The value return depends on the pin's (channel) configuration. Refer to [AnalogConfiguration](./AnalogConfiguration.md) about analog input sensors and modes.
+The analog reading on the pin. The value return depends on the pin's (channel) configuration. Refer to [AnalogConfiguration](./AnalogConfiguration.md) about analog input sensors and modes. **Data type**: `uint32_t`. The return type differs from the default Arduino definition for this function but is required to comply with NXprog higher resolution.
 
-**Data type**: `uint32_t`. The return type differs from the default Arduino definition for this function but is required to comply with NXprog higher resolution.
+The output value unit will depend on the configured [sensor type](./AnalogConfiguration.md#sensor-type) (temperature or linear sensor). See tables below.
+
+Linear sensor |  Unit
+--- | ---
+ 0 - 60 mV | uV (microvolt)
+0 - 5 V | mV (millivolt)
+0 - 10V | mV (millivolt)
+0 - 20 mA | uA (microampere)
+4 - 20 mA | uA (microampere)
+
+
+Temperature sensor |  Unit
+--- | ---
+ (all types) | 0.1 Celsius or 0.1 Fahrenheit 
 
 ## analogWrite
 Writes an analog value to a pin. NXprog models Ramix RL and DO offers 2 channels of analog output with three types of signals:

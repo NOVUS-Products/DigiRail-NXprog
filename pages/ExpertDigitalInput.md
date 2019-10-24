@@ -6,7 +6,7 @@ Configure the digital input to a valid operating mode. The digital input will be
 
 ### Syntax
 ```C
-NovusExpertDIn.setMode(pin, function, nx_din_type_t  connection_type, debounce, preset)
+NovusExpertDIn.setMode(pin, function, connection_type, debounce, preset)
 ```
 
 ### Parameters
@@ -22,7 +22,7 @@ the sensor type Dry Contact. Interval limited to 10 s (10 000 ms) maximum.**Data
 **preset**: the initial value for the rising edge, falling edge, and integrator ON/OFF counter. **Data type**: `uint32_t`.
 
 ### Return
-This function returns `true` when executed successfully. Data type: `bool`.
+This function returns `true` when executed successfully. **Data type**: `bool`.
 
 
 ## setFunctionMode
@@ -53,10 +53,10 @@ NovusExpertDIn.setState(pin, enable)
 ### Parameters
 **pin**: `D1` to `D4` pin.
 
-**enable**: desired state. Data type: `bool`.
+**enable**: desired state. **Data type**: `bool`.
 
 ### Return
-This function returns `true` when executed successfully. Data type: `bool`.
+This function returns `true` when executed successfully. **Data type**: `bool`.
 
 
 ## setConnectionType
@@ -74,7 +74,7 @@ NovusExpertDIn.setConnectionType(pin, connection_type)
 **connection_type**: the type of sensor to be used. **Data type**: `nx_din_type_t` as defined in [Connection type](./DigitalConfiguration.md/#Connection-type). 
 
 ### Return
-This function returns `true` when executed successfully. Data type: `bool`.
+This function returns `true` when executed successfully. **Data type**: `bool`.
 
 ## setDebounce
 
@@ -123,4 +123,4 @@ NovusExpertDIn.readTimer(pin, onoff)
 **onoff**:  `false` to retrieve time in OFF state, `false` for time in ON state.**Data type**: `bool`.
 
 ### Return
-This function returns the current time in the state defined in `onoff` parameter when executed successfully and `NX_INVALID_TIME` otherwise. Data type: `uint32_t`.
+This function returns the current time in the state defined in `onoff` parameter when executed successfully and `NX_INVALID_TIME` otherwise. **Data type**: `uint32_t`.
