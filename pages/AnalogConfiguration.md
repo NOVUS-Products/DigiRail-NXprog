@@ -40,8 +40,8 @@ For details about connecting sensors and measuring ranges, please refer to NXpro
 
 ### Temperature unit
 This setting is required when the sensor is one of the Temperature Sensors group in Sensor type. The allowed values for this member are:
-* `CELSIUS`
-* `FAHRENHEIT`
+* `_CELSIUS`
+* `_FAHRENHEIT`
 
 ### Input range
 This measurement range is required when the sensor is one of the Linear Analog Signals group in Sensor type.
@@ -83,9 +83,9 @@ Allows you to set the operating range of the analog output:
     
 ### Poweron state
  It allows you to set an initial value for the analog output when turning on the device and receiving a command. There are three possible options: 
- * **Disabled**: Allows the analog output to remain off after device initialization and until a valid command is received. Use `PO_AOUT_DISABLED` to select this mode.
- * **Configured Value**: Allows you to set the value to be adopted in the Initial Value parameter after the device initialization and until a valid command is received. Use `PO_AOUT_CONFIGURED_VALUE` to select this mode.
- * **Last Valid Value**: Allows the analog output to adopts the last valid value recorded. Use `PO_AOUT_LAST_VALID_VALUE` to select this mode.
+ * **Disabled**: Allows the analog output to remain off after device initialization and until a valid command is received. Use `_PO_AOUT_DISABLED` to select this mode.
+ * **Configured Value**: Allows you to set the value to be adopted in the Initial Value parameter after the device initialization and until a valid command is received. Use `_PO_AOUT_CONFIGURED_VALUE` to select this mode.
+ * **Last Valid Value**: Allows the analog output to adopts the last valid value recorded. Use `_PO_AOUT_LAST_VALID_VALUE` to select this mode.
 
  ### Safe value watchdog
  It allows you to set a value for the analog output in case of loss of  Ethernet and/or RS485 communication. 

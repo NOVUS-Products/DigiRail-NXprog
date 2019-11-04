@@ -16,7 +16,7 @@ Please refer to the function details listed below.
 
 It generates a square wave of the specified frequency (50 Hz or higher) and a 50% duty cycle on a digital output port. The duration must be specified and the tone can be interrupted by calling to `noTone` function. 
 
-This function will only effective when the output port is configured to `DOUT_PULSE_TRAIN` mode. Please, refer to [DigitalConfiguration](./DigitalConfiguration.md) about digital output modes and parameters.
+This function will only effective when the output port is configured to `_DOUT_PULSE_TRAIN` mode. Please, refer to [DigitalConfiguration](./DigitalConfiguration.md) about digital output modes and parameters.
 
 ### Syntax
 ```C
@@ -36,7 +36,7 @@ This function doesn't return any value.
 
 ## noTone
 
-Stops the generation of a square wave triggered by tone(). It does not affect if the output port is not configured to `DOUT_PULSE_TRAIN` mode.
+Stops the generation of a square wave triggered by tone(). It does not affect if the output port is not configured to `_DOUT_PULSE_TRAIN` mode.
 
 ### Syntax
 ```C

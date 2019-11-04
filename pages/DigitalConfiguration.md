@@ -16,18 +16,18 @@ The possible input function types are defined by the values of the `nx_din_funct
 
 Mode | nx_din_function_t |Comment
 --- | --- | --- 
- Logical Status | `DIN_LOGICAL_STATE` | Level is converted to the logic states 0 and 1. 
-Counter Positive Edge | `DIN_COUNTER_POS_EDGE` | Allows the digital input to count the number of pulses received at its terminals. The counter is incremented in the rising edge (transition from 0 to 1) of the received pulse. 
-Counter Negative Edge | `DIN_COUNTER_NEG_EDGE` |  The same as above for the falling edge (transition from 1 to 0) of the received pulse. 
-Integrator ON/OFF | `DIN_INTEGRATOR` | Allows the sum (integration) of the time intervals measured with the digital input in logic state 0 to be performed and also the sum of the time intervals measured with the digital input in the logical state 1. It will provide the two pieces of information separately. The value is displayed in seconds. 
+ Logical Status | `_DIN_LOGICAL_STATE` | Level is converted to the logic states 0 and 1. 
+Counter Positive Edge | `_DIN_COUNTER_RISING_EDGE` | Allows the digital input to count the number of pulses received at its terminals. The counter is incremented in the rising edge (transition from 0 to 1) of the received pulse. 
+Counter Negative Edge | `_DIN_COUNTER_FALLING_EDGE,` |  The same as above for the falling edge (transition from 1 to 0) of the received pulse. 
+Integrator ON/OFF | `_DIN_INTEGRATOR` | Allows the sum (integration) of the time intervals measured with the digital input in logic state 0 to be performed and also the sum of the time intervals measured with the digital input in the logical state 1. It will provide the two pieces of information separately. The value is displayed in seconds. 
 
 For details about connecting sensors, please refer to NXprog Instruction Manual.
 
 ### Connection type
 These digital channels are suitable for receiving Dry Contact, NPN and PNP electrical signals defined by `nx_din_type_t` type. The allowed values for this member are:
-* `DIN_PNP`
-* `DIN_NPN`
-* `DIN_DRY`
+* `_DIN_PNP`
+* `_DIN_NPN`
+* `_DIN_DRY`
 
 For details about connecting sensors, please refer to NXprog Instruction Manual.
 
@@ -52,9 +52,9 @@ The digital output has three actuation modes defined by `nx_dout_actuation_mode_
 
 Mode | Value | Comment
 --- | --- | ---
-Logical State | DOUT_LOGICAL_STATE | The digital output reproduces the logical status of its value set by `digitalWrite` function group.
-Pulse | DOUT_SINGLE_PULSE | When the value set to 1 using `digitalWrite` function, the output will turn on for a specific time interval (set in the **Pulse duration** parameter) and then return to the OFF state. When this output is in ENABLE state does not necessarily imply that the output is ON or activated.
-Pulse Train | DOUT_PULSE_TRAIN | When the value set to 1 using `digitalWrite` function, the output will create a defined number of pulses (set in the **Number of pulses** parameter), with a defined duration (set in the **Pulse duration** parameter) and in a defined period (set in the **Repetition period** parameter). After the pulse sequence, the digital output will return to the off state.
+Logical State | _DOUT_LOGICAL_STATE | The digital output reproduces the logical status of its value set by `digitalWrite` function group.
+Pulse | _DOUT_SINGLE_PULSE | When the value set to 1 using `digitalWrite` function, the output will turn on for a specific time interval (set in the **Pulse duration** parameter) and then return to the OFF state. When this output is in ENABLE state does not necessarily imply that the output is ON or activated.
+Pulse Train | _DOUT_PULSE_TRAIN | When the value set to 1 using `digitalWrite` function, the output will create a defined number of pulses (set in the **Number of pulses** parameter), with a defined duration (set in the **Pulse duration** parameter) and in a defined period (set in the **Repetition period** parameter). After the pulse sequence, the digital output will return to the off state.
 
    ![alt text](./images/PulseTrain.png "Pulse Train mode")
 
@@ -66,9 +66,9 @@ These are the valid combination for ***Operating mode***, ***Pulse time*** and *
 
 Operating mode | Pulse time | Pulse period | Number of pulses
 --- | --- | ---- | ----
-`DOUT_LOGICAL_STATE` | n/u | n/u | must be `0`
-`DOUT_SINGLE_PULSE` | n/u | n/u | must be `1`
-`DOUT_PULSE_TRAIN` | greater or equal to `0` | greater or equal to `0` | must be greater than `1`
+`_DOUT_LOGICAL_STATE` | n/u | n/u | must be `0`
+`_DOUT_SINGLE_PULSE` | n/u | n/u | must be `1`
+`_DOUT_PULSE_TRAIN` | greater or equal to `0` | greater or equal to `0` | must be greater than `1`
 
 In the table above, the value **n/u** indicates that this value is not used in the listed mode.
 
@@ -77,6 +77,6 @@ In the table above, the value **n/u** indicates that this value is not used in t
  
  State | Value | Comment
 --- | --- | ---
- Off | `PO_DOUT_OFF` | Allows the digital output to remain off (0) after device initialization.
-On | `PO_DOUT_ON` |Allows the digital output to start on (1) after device initialization.
-Last Valid State | `PO_DOUT_LAST_VALID` | Allows the digital output to adopt the last valid state registered.
+ Off | `_PO_DOUT_OFF` | Allows the digital output to remain off (0) after device initialization.
+On | `_PO_DOUT_ON` |Allows the digital output to start on (1) after device initialization.
+Last Valid State | `_PO_DOUT_LAST_VALID` | Allows the digital output to adopt the last valid state registered.

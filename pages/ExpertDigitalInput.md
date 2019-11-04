@@ -95,7 +95,7 @@ NovusExpertDIn.setDebounce(pin, debounce)
 This function returns `true` when executed successfully. **Data type**: `bool`.
 
 ## readCounter
-Reads counter value for digital input, when it's set as a Counter, that is in mode `DIN_COUNTER_NEG_EDGE` or `DIN_COUNTER_POS_EDGE` as defined in [Function type](./DigitalConfiguration.md/#Function-type).
+Reads counter value for digital input, when it's set as a Counter, that is in mode `_DIN_COUNTER_RISING_EDGE` or `_DIN_COUNTER_FALLING_EDGE,` as defined in [Function type](./DigitalConfiguration.md/#Function-type).
 
 ### Syntax
 ```C
@@ -110,7 +110,7 @@ This function returns the current value of the counter when executed successfull
 
 ## readTimer
 
-Read timer register if digital input mode is set as Timer Counter, that is in mode `DIN_INTEGRATOR` as defined in [Function type](./DigitalConfiguration.md/#Function-type).
+Read timer register if digital input mode is set as Timer Counter, that is in mode `_DIN_INTEGRATOR` as defined in [Function type](./DigitalConfiguration.md/#Function-type).
 
 ### Syntax
 ```C

@@ -16,7 +16,8 @@ The user guide is a short version in English, which only shows the functions tha
 
 #### Windows
 
-1. Download the latest **NXperience** version from [NOVUS download page](https://www.novusautomation.com/site/default.asp?TroncoID=926290&SecaoID=819426&SubsecaoID=0&Idioma=1) and install it.
+1. The NOVUS NXprog requires **NXperience** version ***2.0.6.00*** or above.
+1. Download the latestes version of **NXperience** from [NOVUS download page](https://www.novusautomation.com/site/default.asp?TroncoID=926290&SecaoID=819426&SubsecaoID=0&Idioma=1) and install it.
 1. Plugin the NXprog.
 1. Windows will detect the board. 
 
@@ -87,6 +88,7 @@ The NXprog extensions to Arduino standard language provide the required function
 
 **Novus Expert Analog Input**
   * [setMode()](./pages/ExpertAnalogInput.md#setmode)
+  * [setModeLinear()](./pages/ExpertAnalogInput.md#setmodelinear)
   * [setRange()](./pages/ExpertAnalogInput.md#setrange)
   * [setUnit()](./pages/ExpertAnalogInput.md#setunit)
   * [enFilter()](./pages/ExpertAnalogInput.md#enfilter)

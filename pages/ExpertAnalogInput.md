@@ -20,6 +20,83 @@ NovusExpertAIn.setMode(pin, type, temp, safeState);
 ### Return
 This function returns `true` when executed successfully. **Data type**: `bool`.
 
+### Example code
+```C
+bool ledBlink = true;
+int temperatureValue = 0;
+
+void setup() {
+    pinMode(LED_BUILTIN, OUTPUT);
+    Serial.begin(9600);
+    NovusExpertAIn.setMode(A1, tc_T, _CELSIUS, 0);
+}
+
+void loop() {
+    // read the temperature in value:
+    temperatureValue = analogRead(A1);
+
+    Serial.print("sensor = ");
+    Serial.println(temperatureValue);
+
+    if(ledBlink)
+        ledBlink = false;
+    else
+        ledBlink = true;
+
+    digitalWrite(LED_BUILTIN, (PinStatus) ledBlink);
+  
+    delay(2000);
+}
+```
+
+## setModeLinear
+Performs configuration of the operation mode of specified linear analog input. This function only works for linear input type and when the analog input will be enabled when it is successfully executed.
+
+### Syntax
+```C
+NovusExpertAIn.setModeLinear(pin, type, safeState); 
+```
+
+### Parameters
+**pin**: `A1` or `A2` pin.
+
+**type**: input type. **Data type**: `nx_ain_sensor_t`. See [Sensor Type](./AnalogConfiguration.md/#sensor-type) definitions.
+
+**safeState**: value to be displayed when there is an error in the configured input. **Data type**: `float`.
+
+### Return
+This function returns `true` when executed successfully. It returns false when input type is not linear.  **Data type**: `bool`.
+
+### Example code
+```C
+bool ledBlink = true;
+int temperatureValueA = 0;
+
+void setup() {
+    // initialize serial communications at 9600 bps:
+    pinMode(LED_BUILTIN, OUTPUT);
+    Serial.begin(9600);
+    NovusExpertAIn.setModeLinear(A2, _0_60mV, 0);
+}
+
+void loop() {
+    // read the analog in value:
+    temperatureValueA = analogRead(A2);
+
+    // print the results to the Serial Monitor:
+    Serial.print("sensor = ");
+    Serial.println(temperatureValueA);
+
+    if(ledBlink)
+        ledBlink = false;
+    else
+        ledBlink = true;
+    digitalWrite(LED_BUILTIN, (PinStatus) ledBlink);
+  
+    delay(2000);
+}
+```
+
 ## setRange
 Sets the lower and higher value for the range -65.535 to 65.535 in a linear input (like 0-60mV, 0-5V, etc). 
 

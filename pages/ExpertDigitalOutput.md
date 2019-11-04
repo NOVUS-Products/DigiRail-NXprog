@@ -44,6 +44,27 @@ NovusExpertDOut.setState(pin, enable)
 ### Return
 This function returns `true` when executed successfully. **Data type**: `bool`.
 
+### Example code
+```C
+void setup() {
+  pinMode(LED_BUILTIN, OUTPUT);
+  Serial.begin(9600);
+
+  // initialize digital Output
+  NovusExpertDOut.setMode(K1, _DOUT_SINGLE_PULSE, 10, 0, 1, _PO_DOUT_OFF, false, false);
+  digitalWrite(K1, LOW);
+}
+
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH); 
+  digitalWrite(K1, 1HIGH);
+  delay(500);
+  digitalWrite(LED_BUILTIN, LOW);
+  digitalWrite(K1, LOW);
+  delay(500);
+}
+```
+
 ## setSafeState
 This function sets the condition to be adopted by the digital output when a command is interrupted due to a communication failure. The digital output will be enabled when this function succeeds.
 
@@ -124,7 +145,7 @@ This function returns `true` when executed successfully. **Data type**: `bool`.
 ```C
 void setup() {
     pinMode(LED_BUILTIN, OUTPUT);
-    NovusExpertDOut.enInstant(K1, PO_DOUT_OFF, false); //Configure digital output channel 1 to write
+    NovusExpertDOut.enInstant(K1, _PO_DOUT_OFF, false); //Configure digital output channel 1 to write
 }
 
 void loop() {
