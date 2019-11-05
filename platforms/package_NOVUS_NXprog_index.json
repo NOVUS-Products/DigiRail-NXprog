@@ -17,12 +17,12 @@
            {
              "online": "https://github.com/NOVUS-Products/DigiRail-NXprog"
            },
-           "url": "https://github.com/NOVUS-Products/DigiRail-NXprog/raw/master/platforms/NXprog-platform-V0.4.0.zip",
-           "checksum": "SHA-256:2C59E33F42E9C508CE467C7F3292A4E084181A56B709BB1D90E846E4A09C1C44",
-           "archiveFileName": "NXprog-platform-V0.4.0.zip",
-           "size": "420181",
+           "url": "https://github.com/NOVUS-Products/DigiRail-NXprog/raw/master/platforms/NXprog-platform-V0.9.0.zip",
+           "checksum": "SHA-256:F840CDCBEF0048C272E1028817D0A024C6845AF7CFAC7A1C3CFF54495E6F5518",
+           "archiveFileName": "NXprog-platform-V0.9.0.zip",
+           "size": "431778",
            "name": "NXprog",
-           "version": "0.4.0",
+           "version": "0.9.0",
            "architecture": "megaavr",
            "boards": 
            [
@@ -31,120 +31,21 @@
              }
            ],
            "toolsDependencies": 
-		   [
-			  { 
-				 "packager":"arduino",
-				 "name":"avr-gcc",
-				 "version":"7.3.0-atmel3.6.1-arduino5"
-			  },
-			  { 
-				 "packager":"arduino",
-				 "name":"avrdude",
-				 "version":"6.3.0-arduino16"
-			  }
-		   ]
-         },
-         {
-           "category": "Contributed",
-           "help": 
-           {
-             "online": "https://github.com/NOVUS-Products/DigiRail-NXprog"
-           },
-           "url": "https://github.com/NOVUS-Products/DigiRail-NXprog/raw/master/platforms/NXprog-platform-V0.6.0.zip",
-           "checksum": "SHA-256:D021FE5526C7FE32145A1FE560EC2AE77F9FFC1D2538EA4F79F99AC1CE469E61",
-           "archiveFileName": "NXprog-platform-V0.6.0.zip",
-           "size": "436507",
-           "name": "NXprog",
-           "version": "0.6.0",
-           "architecture": "megaavr",
-           "boards": 
-           [
-             {
-               "name": "RAMIX DO/RL ETH"
-             }
-           ],
-           "toolsDependencies": 
-		   [
-			  { 
-				 "packager":"arduino",
-				 "name":"avr-gcc",
-				 "version":"7.3.0-atmel3.6.1-arduino5"
-			  },
-			  { 
-				 "packager":"arduino",
-				 "name":"avrdude",
-				 "version":"6.3.0-arduino16"
-			  }
-		   ]
-         }, 
-         {
-           "category": "Contributed",
-           "help": 
-           {
-             "online": "https://github.com/NOVUS-Products/DigiRail-NXprog"
-           },
-           "url": "https://github.com/NOVUS-Products/DigiRail-NXprog/raw/master/platforms/NXprog-platform-V0.7.0.zip",
-           "checksum": "SHA-256:AC0283DE59AB1862D8680DCABDF6D4BC8E21F3F9BA2D441FA730A0E340186C62",
-           "archiveFileName": "NXprog-platform-V0.7.0.zip",
-           "size": "442784",
-           "name": "NXprog",
-           "version": "0.7.0",
-           "architecture": "megaavr",
-           "boards": 
-           [
-             {
-               "name": "RAMIX DO/RL ETH"
-             }
-           ],
-           "toolsDependencies": 
-		   [
-			  { 
-				 "packager":"arduino",
-				 "name":"avr-gcc",
-				 "version":"7.3.0-atmel3.6.1-arduino5"
-			  },
-			  { 
-				 "packager":"arduino",
-				 "name":"avrdude",
-				 "version":"6.3.0-arduino16"
-			  }
-		   ]
-         },
-         {
-           "category": "Contributed",
-           "help": 
-           {
-             "online": "https://github.com/NOVUS-Products/DigiRail-NXprog"
-           },
-           "url": "https://github.com/NOVUS-Products/DigiRail-NXprog/raw/master/platforms/NXprog-platform-V0.8.0.zip",
-           "checksum": "SHA-256:5369A6D88C4E0E54528E5E2598C2526948008EB163E15E90988867516ACCC44F",
-           "archiveFileName": "NXprog-platform-V0.8.0.zip",
-           "size": "431575",
-           "name": "NXprog",
-           "version": "0.8.0",
-           "architecture": "megaavr",
-           "boards": 
-           [
-             {
-               "name": "RAMIX DO/RL ETH"
-             }
-           ],
-           "toolsDependencies": 
-		   [
-			  { 
-				 "packager":"arduino",
-				 "name":"avr-gcc",
-				 "version":"7.3.0-atmel3.6.1-arduino5"
-			  },
-			  { 
-				 "packager":"arduino",
-				 "name":"avrdude",
-				 "version":"6.3.0-arduino16"
-			  }
-		   ]
-         }
-      ],
-      "tools":[]
+		       [
+			       { 
+				       "packager":"arduino",
+				       "name":"avr-gcc",
+				       "version":"7.3.0-atmel3.6.1-arduino5"
+			        },
+			        { 
+				        "packager":"arduino",
+				        "name":"avrdude",
+				        "version":"6.3.0-arduino16"
+			        }
+		        ]
+          }
+        ],
+        "tools":[]
     }
   ]
 }

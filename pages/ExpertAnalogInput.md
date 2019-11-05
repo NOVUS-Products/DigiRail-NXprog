@@ -5,7 +5,7 @@ Performs a complete configuration of the operation mode of specified analog inpu
 
 ### Syntax
 ```C
-NovusExpertAIn.setMode(pin, type, temp, safeState); 
+NovusExpertAIn.setMode(pin, type, unit, safeState); 
 ```
 
 ### Parameters
@@ -13,7 +13,7 @@ NovusExpertAIn.setMode(pin, type, temp, safeState);
 
 **type**: input type. **Data type**: `nx_ain_sensor_t`. See [Sensor Type](./AnalogConfiguration.md/#sensor-type) definitions.
 
-**temp**: temperature unit. **Data type**: `nx_ain_temp_unit_t`. See [Temperature unit](./AnalogConfiguration.md/#temperature-unit) definitions.
+**unit**: temperature unit. **Data type**: `nx_ain_temp_unit_t`. See [Temperature unit](./AnalogConfiguration.md/#temperature-unit) definitions.
 
 **safeState**: value to be displayed when there is an error in the configured input. **Data type**: `float`.
 

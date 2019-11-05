@@ -132,3 +132,4 @@ The NXprog extensions to Arduino standard language provide the required function
 
 **Special Features**
   * [Modbus registers](./pages/SpecialRegisters.md)
+  * [Watchdog timer](./pages/WatchdogTimer.md)

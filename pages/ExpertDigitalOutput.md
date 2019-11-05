@@ -57,7 +57,7 @@ void setup() {
 
 void loop() {
   digitalWrite(LED_BUILTIN, HIGH); 
-  digitalWrite(K1, 1HIGH);
+  digitalWrite(K1, HIGH);
   delay(500);
   digitalWrite(LED_BUILTIN, LOW);
   digitalWrite(K1, LOW);
@@ -120,6 +120,31 @@ NovusExpertDOut.enPulse(pin, opMode, pulseTime, pulsePeriod, nPulse)
 
 ### Return
 This function returns `true` when executed successfully. **Data type**: `bool`.
+
+### Example code
+```C
+bool generate_pulse = true;
+void setup() {
+    pinMode(LED_BUILTIN, OUTPUT);
+    Serial.begin(9600);
+    // Configure digital output K1 as a pulse train
+    // Every time 1 is written in K1, it will generate four 1 second pulses (2-second width)
+    NovusExpertDOut.enPulse(K1, _DOUT_PULSE_TRAIN, 20, 40, 4); 
+    digitalWrite(K1, LOW);
+}
+
+void loop() {
+    digitalWrite(LED_BUILTIN, HIGH);
+    delay(500);
+    digitalWrite(LED_BUILTIN, LOW);
+    delay(500);
+    if(generate_pulse) {
+        // generate pulse train just once
+        generate_pulse = false; 
+        digitalWrite(K1, HIGH);  // 
+    }
+}
+```
 
 ## enInstant
 Configure channel as digital output instant value.
