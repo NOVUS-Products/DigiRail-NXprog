@@ -99,12 +99,12 @@ NovusExpertDOut.setPowerOnState(pin, po_state)
 ### Return
 This function returns `true` when executed successfully. **Data type**: `bool`.
 
-## enPulse
-Sets the digital output actuation modes.
+## setActuationMode
+Sets the digital output actuation mode: Logical State, Single Pulse or Pulse Train .
 
 ### Syntax
 ```C
-NovusExpertDOut.enPulse(pin, opMode, pulseTime, pulsePeriod, nPulse)
+NovusExpertDOut.setActuationMode(pin, opMode, pulseTime, pulsePeriod, nPulse)
 ```
 
 ### Parameters
@@ -112,11 +112,11 @@ NovusExpertDOut.enPulse(pin, opMode, pulseTime, pulsePeriod, nPulse)
 
 **opMode**: actuation mode. **Data type**: `nx_dout_actuation_mode_t` as defined in [Actuation mode](./DigitalConfiguration.md/#Actuation-mode)
 
-**pulseTime**: defined duration of a pulse in tenths of a second. If this value is 10 the pulse time will be 1 second.  **Data type**: `uint16_t`.
+**pulseTime**: defined duration of a pulse in tenths of a second. For example, when this value is 10 the pulse time will be 1 second.  **Data type**: `uint16_t`.
 
-**pulsePeriod**: the defined period of the pulse train in tenths of a second. If this value is 30 the pulse period will be 3 seconds. **Data type**: `uint16_t`.
+**pulsePeriod**: the defined period of the pulse train in tenths of a second. For example, when this value is 30 the pulse period will be 3 seconds. **Data type**: `uint16_t`.
 
-**nPulse**: number of pulses to be generate (see valid options in [Actuation mode](./DigitalConfiguration.md/#Actuation-mode)). **Data type**: `uint16_t`.
+**nPulse**: number of pulses to be generate (see valid options in [Actuation mode](./DigitalConfiguration.md/#Actuation-mode)). This number must be greater than 1 when `opMode` is `_DOUT_PULSE_TRAIN`. **Data type**: `uint16_t`.
 
 ### Return
 This function returns `true` when executed successfully. **Data type**: `bool`.
@@ -129,7 +129,7 @@ void setup() {
     Serial.begin(9600);
     // Configure digital output K1 as a pulse train
     // Every time 1 is written in K1, it will generate four 1 second pulses (2-second width)
-    NovusExpertDOut.enPulse(K1, _DOUT_PULSE_TRAIN, 20, 40, 4); 
+    NovusExpertDOut.setActuationMode(K1, _DOUT_PULSE_TRAIN, 20, 40, 4); 
     digitalWrite(K1, LOW);
 }
 

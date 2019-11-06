@@ -9,7 +9,7 @@ Enable watchdog timer.
 
 ### Syntax
 ```C
-enableWDT()
+NovusExpert.enableWDT()
 ```
 
 ### Return
@@ -39,7 +39,7 @@ Disable watchdog timer.
 
 ### Syntax
 ```C
-disableWDT()
+NovusExpert.disableWDT()
 ```
 
 ### Return
@@ -63,16 +63,16 @@ void loop() {
 ```
 ## isWDTActive
 
-Disable watchdog timer. 
+This function returns the current watchdog enable state. 
 
 ### Syntax
 ```C
-isWDTActive()
+NovusExpert.isWDTActive()
 ```
 
 ### Return
 
-This function returns the current watchdog enable state. **Data type**: `bool`.
+Current watchdog enable state. **Data type**: `bool`.
 
 ### Example code
 ```C
@@ -96,7 +96,7 @@ void loop() {
 
 ### Syntax
 ```C
-toggleWDT()
+NovusExpert.toggleWDT()
 ```
 
 ### Return

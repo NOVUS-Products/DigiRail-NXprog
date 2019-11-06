@@ -5,7 +5,7 @@ Performs a complete configuration of the operation mode of a specified analog ou
 
 ### Syntax
 ```C
-NovusExpertAIn.setMode(pin, type, range, poweronState, poweronValue, watchdogValue) 
+NovusExpertAOut.setMode(pin, type, range, poweronState, poweronValue, watchdogValue) 
 ```
 
 ### Parameters
@@ -30,7 +30,7 @@ Enables or disables a specified analog output.
 
 ### Syntax
 ```C
-NovusExpertAIn.setState(pin, enable) 
+NovusExpertAOut.setState(pin, enable) 
 ```
 
 ### Parameters
@@ -47,7 +47,7 @@ Sets the value to be adopted in the Initial Value parameter after the device ini
 
 ### Syntax
 ```C
-NovusExpertAIn.setPowerOnValue(pin, value) 
+NovusExpertAOut.setPowerOnValue(pin, value) 
 ```
 
 ### Parameters
@@ -64,7 +64,7 @@ Sets a value for the analog output in case of loss of RS485/Ethernet communicati
 
 ### Syntax
 ```C
-NovusExpertAIn.setSafeValue(pin, value) 
+NovusExpertAOut.setSafeValue(pin, value) 
 ```
 
 ### Parameters
@@ -80,7 +80,7 @@ This function returns `true` when executed successfully.
 Set an initial value for the analog output when turning on the device and receiving a command. 
 
 ```C
-NovusExpertAIn.setPowerOnState(pin, value) 
+NovusExpertAOut.setPowerOnState(pin, value) 
 ```
 
 ### Parameters

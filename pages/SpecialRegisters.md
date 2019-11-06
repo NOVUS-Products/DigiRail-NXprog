@@ -6,7 +6,7 @@ acquisition (SCADA) and an Arduino application running in NXprog.
 These registers will be available when NXprog is configured as Slave. This will allow that any external application configured as Modbus Master have access to these register using the commands:
 * **READ HOLDING REGISTERS** (0x03)
 * **WRITE HOLDING REGISTERS** (0x06)
-* **WRITE MULTIPLE HOLDING REGISTERS** (0x16)
+* **WRITE MULTIPLE HOLDING REGISTERS** (0x10)
 
 The range of available registers is from Modbus address 400 to 499. The Arduino application uses the same address range using the functions implemented in `SpecialRegisters` class as described below.
 

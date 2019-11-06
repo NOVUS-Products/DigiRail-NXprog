@@ -62,7 +62,7 @@ type | `nx_aout_type_t` | Output type
 range | `nx_aout_range_t` | Operating range
 pon_state | `nx_aout_poweron_state_t` | Power on state
 pon_value | `uint16_t` | Configured power on value
-watchdog_value | `uint16_t` | Safe value watch dog
+watchdog_value | `uint16_t` | Safe value watchdog
 
 For more details, please refer to NXprog Instruction Manual.
 

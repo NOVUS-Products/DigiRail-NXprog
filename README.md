@@ -116,7 +116,7 @@ The NXprog extensions to Arduino standard language provide the required function
   * [setState()](./pages/ExpertDigitalOutput.md#setstate)
   * [setSafeState()](./pages/ExpertDigitalOutput.md#setsafestate)
   * [setPowerOnState()](./pages/ExpertDigitalOutput.md#setpoweronstate)
-  * [enPulse()](./pages/ExpertDigitalOutput.md#enpulse)
+  * [setActuationMode()](./pages/ExpertDigitalOutput.md#setActuationMode)
   * [enInstant()](./pages/ExpertDigitalOutput.md#eninstant)
   
 **Configuration Values**
