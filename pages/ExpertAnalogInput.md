@@ -5,7 +5,7 @@ Performs a complete configuration of the operation mode of specified analog inpu
 
 ### Syntax
 ```C
-NovusExpertAIn.setMode(pin, type, unit, safeState); 
+NovusExpertAIn.setMode(pin, type, unit, safeValue); 
 ```
 
 ### Parameters
@@ -15,7 +15,7 @@ NovusExpertAIn.setMode(pin, type, unit, safeState);
 
 **unit**: temperature unit. **Data type**: `nx_ain_temp_unit_t`. See [Temperature unit](./AnalogConfiguration.md/#temperature-unit) definitions.
 
-**safeState**: value to be displayed when there is an error in the configured input. **Data type**: `float`.
+**safeValue**: value to be displayed when there is an error in the configured input. **Data type**: `int32_t`. For temperature sensors, this value may be negative.
 
 ### Return
 This function returns `true` when executed successfully. **Data type**: `bool`.
@@ -23,7 +23,7 @@ This function returns `true` when executed successfully. **Data type**: `bool`.
 ### Example code
 ```C
 bool ledBlink = true;
-int temperatureValue = 0;
+int32_t temperatureValue = 0;
 
 void setup() {
     pinMode(LED_BUILTIN, OUTPUT);
@@ -54,7 +54,7 @@ Performs configuration of the operation mode of specified linear analog input. T
 
 ### Syntax
 ```C
-NovusExpertAIn.setModeLinear(pin, type, safeState); 
+NovusExpertAIn.setModeLinear(pin, type, safeValue); 
 ```
 
 ### Parameters
@@ -62,7 +62,7 @@ NovusExpertAIn.setModeLinear(pin, type, safeState);
 
 **type**: input type. **Data type**: `nx_ain_sensor_t`. See [Sensor Type](./AnalogConfiguration.md/#sensor-type) definitions.
 
-**safeState**: value to be displayed when there is an error in the configured input. **Data type**: `float`.
+**safeValue**: value to be displayed when there is an error in the configured input. **Data type**: `int32_t`. 
 
 ### Return
 This function returns `true` when executed successfully. It returns false when input type is not linear.  **Data type**: `bool`.
@@ -70,7 +70,7 @@ This function returns `true` when executed successfully. It returns false when i
 ### Example code
 ```C
 bool ledBlink = true;
-int temperatureValueA = 0;
+int32_t linearValueA2 = 0;
 
 void setup() {
     // initialize serial communications at 9600 bps:
@@ -81,11 +81,11 @@ void setup() {
 
 void loop() {
     // read the analog in value:
-    temperatureValueA = analogRead(A2);
+    linearValueA2 = analogRead(A2);
 
     // print the results to the Serial Monitor:
     Serial.print("sensor = ");
-    Serial.println(temperatureValueA);
+    Serial.println(linearValueA2);
 
     if(ledBlink)
         ledBlink = false;
@@ -108,7 +108,7 @@ Sensor type | Low value | High | Unit
 0 - 5 V | 0 | 5000 | mV (millivolt)
 0 - 10V | 0 | 10000 | mV (millivolt)
 0 - 20 mA | 0 | 20000 | uA (microampere)
-4 - 20 mA | 0 | 20000 | uA (microampere)
+4 - 20 mA | 4000 | 20000 | uA (microampere)
 
 ### Syntax
 ```C
@@ -118,9 +118,9 @@ NovusExpertAIn.setRange(pin, low, high)
 ### Parameters
 **pin**: `A1` or `A2` pin.
 
-**low**: **Data type**: `uint16_t`.
+**low**: **Data type**: `int32_t`.
 
-**high**: **Data type**: `uint16_t`.
+**high**: **Data type**: `int32_t`.
 
 ### Return
 This function returns `true` when executed successfully. It returns `false` when a communication error occurs when the pin is not an input or the input type is a temperature sensor. **Data type**: `bool`.
@@ -198,3 +198,103 @@ NovusExpertAIn.setState(pin, enable)
 This function returns `true` when executed successfully.
 **Data type**: `bool`.
 
+### Example code
+```C
+bool ledBlink = true;
+ain_cfg_t   conf_AI;
+int state = 1;
+// Commands
+String command; 
+char command_buf[80];
+
+void setup() {
+    pinMode(LED_BUILTIN, OUTPUT);
+    Serial.begin(9600);
+    Serial.setTimeout(10); // 10 milliseconds
+    NovusExpertAIn.setMode(A1, tc_T, _CELSIUS, 0);
+}
+
+void loop() {
+    if(Serial.available() != 0){
+        command = Serial.readString(); 
+        command.toCharArray(command_buf, sizeof(command_buf));
+        state = atoi(command_buf);
+        if (state == 0)
+            NovusExpertAIn.setState(A1, false);   
+        else
+            NovusExpertAIn.setState(A1, true);   
+    }
+    NovusConfig.getAInConfig(A1, &conf_AI);
+    Serial.println(">>>>>>>>>>>>><<<<<<<<<<<<<<");
+    Serial.println("ANALOG INPUT 1 CONFIGURATION");
+    Serial.print("  Enabled: ");
+    Serial.println(conf_AI.enabled);
+  
+    if(ledBlink)
+        ledBlink = false;
+    else
+        ledBlink = true;
+
+    digitalWrite(LED_BUILTIN, (PinStatus) ledBlink);
+  
+    delay(2000);
+}
+```
+
+## setSafeVaslue
+Configures the value to be displayed when there is an error in the configured input.
+
+### Syntax
+```C
+NovusExpertAIn.setSafeValue(pin, safeValue); 
+```
+
+### Parameters
+**pin**: `A1` or `A2` pin.
+
+**safeValue**: value to be displayed when there is an error in the configured input. **Data type**: `int32_t`. For temperature sensors, this value may be negative.
+
+### Return
+This function returns `true` when executed successfully. **Data type**: `bool`.
+
+### Example code
+```C
+bool ledBlink = true;
+int32_t temperatureValue = 0;
+int32_t safeValue = 0;
+// Commands
+String command; 
+char command_buf[80];
+
+void setup() {
+    pinMode(LED_BUILTIN, OUTPUT);
+    Serial.begin(9600);
+    Serial.setTimeout(10); // 10 milliseconds
+    NovusExpertAIn.setMode(A1, tc_T, _CELSIUS, 0);
+}
+
+void loop() {
+    if(Serial.available() != 0){
+        // user enter the new safe value (negative values are accepted)
+        command = Serial.readString(); 
+        command.toCharArray(command_buf, sizeof(command_buf));
+        safeValue = atol(command_buf);
+        NovusExpertAIn.setSafeValue(A1, safeValue);   
+    }
+  
+    // read the temperature in value:
+    temperatureValue = analogRead(A1);
+
+    Serial.print("sensor A1 = ");
+    Serial.println(temperatureValue);
+
+    if(ledBlink)
+        ledBlink = false;
+    else
+        ledBlink = true;
+
+    digitalWrite(LED_BUILTIN, (PinStatus) ledBlink);
+  
+    delay(2000);
+}
+```

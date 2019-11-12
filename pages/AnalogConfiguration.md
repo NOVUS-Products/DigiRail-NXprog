@@ -7,8 +7,8 @@ Member | Type | Comment
  enabled | `bool` | channel is enabled/disabled
 type | `nx_ain_sensor_t` | Sensor type
 unit | `nx_ain_temp_unit_t` | Temperature unit
-scale_bottom | `uint32_t` | Input range (scale bottom)
-scale_top | `uint32_t` | Input range (scale top)
+scale_bottom | `int32_t` | Input range (scale bottom)
+scale_top | `int32_t` | Input range (scale top)
 sampling_rate | `nx_ain_sampling_rate_t` | Sampling rate
 
 These channels are suitable for measuring temperature or any other values represented by standard linear electrical signals. `unit` member is used when the selected `type` is a temperature sensor like Pt100, type J, type K, etc. Refer to NXprog Instruction Manual about supported types.

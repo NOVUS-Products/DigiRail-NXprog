@@ -94,6 +94,7 @@ The NXprog extensions to Arduino standard language provide the required function
   * [enFilter()](./pages/ExpertAnalogInput.md#enfilter)
   * [setSamplingRate()](./pages/ExpertAnalogInput.md#setsamplingrate)
   * [setState()](./pages/ExpertAnalogInput.md#setstate)
+  * [setSafeValue()](./pages/ExpertAnalogInput.md#setsafevalue)
 
 **Novus Expert Analog Output**
   * [setMode()](./pages/ExpertAnalogOutput.md#setmode)
@@ -133,3 +134,4 @@ The NXprog extensions to Arduino standard language provide the required function
 **Special Features**
   * [Modbus registers](./pages/SpecialRegisters.md)
   * [Watchdog timer](./pages/WatchdogTimer.md)
+  * [Real Time Clock](./pages/RTC.md)  

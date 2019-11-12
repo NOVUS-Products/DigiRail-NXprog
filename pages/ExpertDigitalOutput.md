@@ -28,6 +28,27 @@ command that redefines its condition. **Data type**: `nx_dout_poweron_state_t` a
 
 Please, refer to [DigitalConfiguration](./DigitalConfiguration.md) about digital output modes and parameters.
 
+### Example code
+```C
+void setup() {
+    pinMode(LED_BUILTIN, OUTPUT);
+    Serial.begin(9600);
+
+    // initialize digital Output
+    NovusExpertDOut.setMode(K1, _DOUT_SINGLE_PULSE, 10, 0, 1, _PO_DOUT_OFF, false, false);
+    digitalWrite(K1, LOW);
+}
+
+void loop() {
+    digitalWrite(LED_BUILTIN, HIGH); 
+    digitalWrite(K1, HIGH);
+    delay(500);
+    digitalWrite(LED_BUILTIN, LOW);
+    digitalWrite(K1, LOW);
+    delay(500);
+}
+```
+
 ## setState
 Enables or disables a specified digital output.
 
@@ -46,24 +67,41 @@ This function returns `true` when executed successfully. **Data type**: `bool`.
 
 ### Example code
 ```C
-void setup() {
-  pinMode(LED_BUILTIN, OUTPUT);
-  Serial.begin(9600);
+dout_cfg_t   conf_DO;
+String command; 
+char command_buf[80];
+int state = 1;
 
-  // initialize digital Output
-  NovusExpertDOut.setMode(K1, _DOUT_SINGLE_PULSE, 10, 0, 1, _PO_DOUT_OFF, false, false);
-  digitalWrite(K1, LOW);
+void setup() {
+    pinMode(LED_BUILTIN, OUTPUT);
+    Serial.begin(9600);
+    Serial.setTimeout(10); // 10 milliseconds
+
+    // initialize digital Output
+    NovusExpertDOut.setMode(K1, _DOUT_SINGLE_PULSE, 10, 0, 1, _PO_DOUT_OFF, false, false);
+    digitalWrite(K1, LOW);
 }
 
 void loop() {
-  digitalWrite(LED_BUILTIN, HIGH); 
-  digitalWrite(K1, HIGH);
-  delay(500);
-  digitalWrite(LED_BUILTIN, LOW);
-  digitalWrite(K1, LOW);
-  delay(500);
+    if(Serial.available() != 0){
+        // user entered the new state
+        command = Serial.readString(); 
+        command.toCharArray(command_buf, sizeof(command_buf));
+        state = atoi(command_buf);
+        if (state == 0)
+            NovusExpertDOut.setState(K1, false);   
+        else
+            NovusExpertDOut.setState(K1, true);   
+    }
+    NovusConfig.getDOutConfig(K1, &conf_DO);
+    Serial.println(">>>>>>>>>>>>><<<<<<<<<<<<<<");
+    Serial.println("DIGITAL OUTPUT 1 CONFIGURATION");
+    Serial.print("  Enabled: ");
+    Serial.println(conf_DO.enabled);
+    delay(2000);
 }
 ```
+
 
 ## setSafeState
 This function sets the condition to be adopted by the digital output when a command is interrupted due to a communication failure. The digital output will be enabled when this function succeeds.
@@ -174,11 +212,11 @@ void setup() {
 }
 
 void loop() {
-  digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on
-  digitalWrite(K1, HIGH);            // turn digital outupt 1 on
-  delay(1000);                       
-  digitalWrite(LED_BUILTIN, LOW);    // turn the LED off
-  digitalWrite(K1, LOW);             // turn digital outupt 1 off
-  delay(1000);                       
+    digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on
+    digitalWrite(K1, HIGH);            // turn digital outupt 1 on
+    delay(1000);                       
+    digitalWrite(LED_BUILTIN, LOW);    // turn the LED off
+    digitalWrite(K1, LOW);             // turn digital outupt 1 off
+    delay(1000);                       
 }
 ```
