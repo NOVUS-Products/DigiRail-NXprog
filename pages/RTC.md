@@ -5,6 +5,8 @@ applications](https://www.nxp.com/docs/en/data-sheet/PCF2127.pdf).
 
 This library depends on Wire library that is included in NXprog platform distribution.
 
+**NOTE**: several examples are provided in this library including one to set the date and time. 
+
 ## begin
 
 Initializes the communication to the internal RTC. This function must be called before any other RTC library method.
@@ -289,6 +291,89 @@ void loop() {
     Serial.print(":");
     Serial.print(_now.minute());
     Serial.print(":");
+    Serial.println(_now.second());
+    Serial.print("Battery low indication: ");
+    Serial.println(rtc.readBattLowFlag());
+}
+```
+
+## setLowPowerMode
+
+Put the RTC in the lowest power consumption mode. This mode is used to extend battery life spam.
+
+This mode does not affect the normal RTC operations.
+
+### Syntax
+```C
+rtc.setLowPowerMode()
+```
+### Parameters
+
+None.
+
+### Return
+
+None.
+
+
+### Example code
+```C
+#include <RTC.h>
+
+RTC_PCF2127 rtc;
+DateTime _now;
+
+void setup() {
+    pinMode(LED_BUILTIN, OUTPUT);
+    Serial.begin(9600);
+    rtc.begin();
+    rtc.setLowPowerMode();
+    _now = rtc.now();
+}
+
+void loop() {    
+    delay(2000);
+    _now = rtc.now();
+    Serial.println(_now.second());
+    Serial.print("Battery low indication: ");
+    Serial.println(rtc.readBattLowFlag());
+}
+```
+
+## isInLowPowerMode
+
+Checks if the RTC in the lowest power consumption mode.
+
+### Syntax
+```C
+rtc.setisInLowPowerModeLowPowerMode()
+```
+### Parameters
+
+None.
+
+### Return
+
+This function returns true if the RTC is in the lowest power consumption mode.
+
+
+### Example code
+```C
+#include <RTC.h>
+
+RTC_PCF2127 rtc;
+DateTime _now;
+
+void setup() {
+    pinMode(LED_BUILTIN, OUTPUT);
+    Serial.begin(9600);
+    rtc.begin();
+    _now = rtc.now();
+}
+
+void loop() {    
+    delay(2000);
+    _now = rtc.now();
     Serial.println(_now.second());
     Serial.print("Battery low indication: ");
     Serial.println(rtc.readBattLowFlag());
