@@ -7,13 +7,13 @@ Read the configuration of an analog input pin.
 
 ### Syntax
 ```C
-NovusConfig.getAInConfig(pin, &output)
+NovusConfig.getAInConfig(pin, &input)
 ```
 
 ### Parameters
 **pin**: `A1` or `A2` pin.
 
-**output**: current configuration. **Data type**: `ain_cfg_t *` as described in [Analog Input configuration data](./AnalogConfiguration.md#analog-input-configuration-data)
+**input**: current configuration. **Data type**: `ain_cfg_t *` as described in [Analog Input configuration data](./AnalogConfiguration.md#analog-input-configuration-data)
 
 ### Return
 

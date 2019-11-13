@@ -52,9 +52,23 @@ void loop() {
 ## setModeLinear
 Performs configuration of the operation mode of specified linear analog input. This function only works for linear input type and when the analog input will be enabled when it is successfully executed.
 
+This function also sets the lower and higher value for the range -65.535 to 65.535 for the linear input (like 0-60mV, 0-5V, etc). 
+
+These are the default range values:
+
+Sensor type | Low value | High | Unit
+--- | --- | --- | ---
+ 0 - 60 mV | 0 | 60000 | uV (microvolt)
+0 - 5 V | 0 | 5000 | mV (millivolt)
+0 - 10V | 0 | 10000 | mV (millivolt)
+0 - 20 mA | 0 | 20000 | uA (microampere)
+4 - 20 mA | 4000 | 20000 | uA (microampere)
+
+When the port is configured by function `NovusExpertAIn.setMode` it assumes one of pair above.
+
 ### Syntax
 ```C
-NovusExpertAIn.setModeLinear(pin, type, safeValue); 
+NovusExpertAIn.setModeLinear(pin, type, safeValue, low, high); 
 ```
 
 ### Parameters
@@ -63,6 +77,10 @@ NovusExpertAIn.setModeLinear(pin, type, safeValue);
 **type**: input type. **Data type**: `nx_ain_sensor_t`. See [Sensor Type](./AnalogConfiguration.md/#sensor-type) definitions.
 
 **safeValue**: value to be displayed when there is an error in the configured input. **Data type**: `int32_t`. 
+
+**low**: low value for the range. **Data type**: `int32_t`.
+
+**high**: high value for the range. **Data type**: `int32_t`.
 
 ### Return
 This function returns `true` when executed successfully. It returns false when input type is not linear.  **Data type**: `bool`.
@@ -76,7 +94,7 @@ void setup() {
     // initialize serial communications at 9600 bps:
     pinMode(LED_BUILTIN, OUTPUT);
     Serial.begin(9600);
-    NovusExpertAIn.setModeLinear(A2, _0_60mV, 0);
+    NovusExpertAIn.setModeLinear(A2, _0_60mV, 0, 0, 60000);
 }
 
 void loop() {
@@ -96,34 +114,6 @@ void loop() {
     delay(2000);
 }
 ```
-
-## setRange
-Sets the lower and higher value for the range -65.535 to 65.535 in a linear input (like 0-60mV, 0-5V, etc). 
-
-These are the default range values when the port is configured by function `NovusExpertAIn.setMode`:
-
-Sensor type | Low value | High | Unit
---- | --- | --- | ---
- 0 - 60 mV | 0 | 60000 | uV (microvolt)
-0 - 5 V | 0 | 5000 | mV (millivolt)
-0 - 10V | 0 | 10000 | mV (millivolt)
-0 - 20 mA | 0 | 20000 | uA (microampere)
-4 - 20 mA | 4000 | 20000 | uA (microampere)
-
-### Syntax
-```C
-NovusExpertAIn.setRange(pin, low, high) 
-```
-
-### Parameters
-**pin**: `A1` or `A2` pin.
-
-**low**: **Data type**: `int32_t`.
-
-**high**: **Data type**: `int32_t`.
-
-### Return
-This function returns `true` when executed successfully. It returns `false` when a communication error occurs when the pin is not an input or the input type is a temperature sensor. **Data type**: `bool`.
 
 ## setUnit
 

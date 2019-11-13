@@ -5,7 +5,7 @@ The watchdog is a timer that will force a restart on the Arduino application if 
 
 ## enableWDT
 
-Enable watchdog timer. 
+Enable watchdog timer. After enabling the watchdog, the application must call `toggleWDT` every 1.6 seconds or less otherwise the application will reset.
 
 ### Syntax
 ```C
@@ -92,7 +92,7 @@ void loop() {
 
 ## toggleWDT
 
- This function resets the watchdog timer. Next 'toggle' must be performed within 1.6 seconds otherwise the application will reboot.
+This function resets the watchdog timer. Next 'toggle' must be performed within 1.6 seconds otherwise the application will reboot.
 
 ### Syntax
 ```C

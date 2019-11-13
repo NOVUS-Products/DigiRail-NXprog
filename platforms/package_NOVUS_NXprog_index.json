@@ -31,18 +31,18 @@
              }
            ],
            "toolsDependencies": 
-		       [
-			       { 
-				       "packager":"arduino",
-				       "name":"avr-gcc",
-				       "version":"7.3.0-atmel3.6.1-arduino5"
-			        },
-			        { 
-				        "packager":"arduino",
-				        "name":"avrdude",
-				        "version":"6.3.0-arduino16"
-			        }
-		        ]
+           [
+             { 
+               "packager":"arduino",
+               "name":"avr-gcc",
+               "version":"7.3.0-atmel3.6.1-arduino5"
+              },
+              { 
+                "packager":"arduino",
+                "name":"avrdude",
+                "version":"6.3.0-arduino16"
+              }
+            ]
          },  
          {
            "category": "Contributed",
@@ -64,18 +64,18 @@
              }
            ],
            "toolsDependencies": 
-		       [
-			       { 
-				       "packager":"arduino",
-				       "name":"avr-gcc",
-				       "version":"7.3.0-atmel3.6.1-arduino5"
-			        },
-			        { 
-				        "packager":"arduino",
-				        "name":"avrdude",
-				        "version":"6.3.0-arduino16"
-			        }
-		        ]
+           [
+             { 
+               "packager":"arduino",
+               "name":"avr-gcc",
+               "version":"7.3.0-atmel3.6.1-arduino5"
+              },
+              { 
+                "packager":"arduino",
+                "name":"avrdude",
+                "version":"6.3.0-arduino16"
+              }
+            ]
          },
          {
            "category": "Contributed",
@@ -97,18 +97,18 @@
              }
            ],
            "toolsDependencies": 
-		       [
-			       { 
-				       "packager":"arduino",
-				       "name":"avr-gcc",
-				       "version":"7.3.0-atmel3.6.1-arduino5"
-			        },
-			        { 
-				        "packager":"arduino",
-				        "name":"avrdude",
-				        "version":"6.3.0-arduino16"
-			        }
-		        ]
+           [
+             { 
+               "packager":"arduino",
+               "name":"avr-gcc",
+               "version":"7.3.0-atmel3.6.1-arduino5"
+              },
+              { 
+                "packager":"arduino",
+                "name":"avrdude",
+                "version":"6.3.0-arduino16"
+              }
+            ]
           },         
          {
            "category": "Contributed",
@@ -130,18 +130,51 @@
              }
            ],
            "toolsDependencies": 
-		       [
-			       { 
-				       "packager":"arduino",
-				       "name":"avr-gcc",
-				       "version":"7.3.0-atmel3.6.1-arduino5"
-			        },
-			        { 
-				        "packager":"arduino",
-				        "name":"avrdude",
-				        "version":"6.3.0-arduino16"
-			        }
-		        ]
+           [
+             { 
+               "packager":"arduino",
+               "name":"avr-gcc",
+               "version":"7.3.0-atmel3.6.1-arduino5"
+              },
+              { 
+                "packager":"arduino",
+                "name":"avrdude",
+                "version":"6.3.0-arduino16"
+              }
+            ]
+          },          
+         {
+           "category": "Contributed",
+           "help": 
+           {
+             "online": "https://github.com/NOVUS-Products/DigiRail-NXprog"
+           },
+           "url": "https://github.com/NOVUS-Products/DigiRail-NXprog/raw/master/platforms/NXprog-platform-V0.13.0.zip",
+           "checksum": "SHA-256:519077E3F29DC354934CF2473703355574C86D1FC519520AF353B61E81FE2FD2",
+           "archiveFileName": "NXprog-platform-V0.13.0.zip",
+           "size": "431980",
+           "name": "NXprog",
+           "version": "0.13.0",
+           "architecture": "megaavr",
+           "boards": 
+           [
+             {
+               "name": "RAMIX DO/RL ETH"
+             }
+           ],
+           "toolsDependencies": 
+           [
+             { 
+               "packager":"arduino",
+               "name":"avr-gcc",
+               "version":"7.3.0-atmel3.6.1-arduino5"
+              },
+              { 
+                "packager":"arduino",
+                "name":"avrdude",
+                "version":"6.3.0-arduino16"
+              }
+            ]
           }
         ],
         "tools":[]

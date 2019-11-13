@@ -135,3 +135,4 @@ The NXprog extensions to Arduino standard language provide the required function
   * [Modbus registers](./pages/SpecialRegisters.md)
   * [Watchdog timer](./pages/WatchdogTimer.md)
   * [Real Time Clock](./pages/RTC.md)  
+  * [EEPROM](./pages/EEPROM.md)    
