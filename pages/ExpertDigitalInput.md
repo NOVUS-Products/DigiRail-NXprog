@@ -94,6 +94,22 @@ NovusExpertDIn.setDebounce(pin, debounce)
 ### Return
 This function returns `true` when executed successfully. **Data type**: `bool`.
 
+## setPreset
+Configure the initial value for a digital input. This value depends on the digital input configured [Function type](./DigitalConfiguration.md/#Function-type).
+
+### Syntax
+```C
+NovusExpertDIn.setPreset(pin, preset)
+```
+
+### Parameters
+**pin**: the name of the digital input pin to read from. In NXprog the pins are `D1` to `D8` as displayed on the front panel.
+
+**preset**: the initial value for the rising edge, falling edge, and integrator ON/OFF counter. **Data type**: `uint32_t`.
+
+### Return
+This function returns `true` when executed successfully. **Data type**: `bool`.
+
 ## readCounter
 Reads counter value for digital input, when it's set as a Counter, that is in mode `_DIN_COUNTER_RISING_EDGE` or `_DIN_COUNTER_FALLING_EDGE,` as defined in [Function type](./DigitalConfiguration.md/#Function-type).
 
@@ -125,19 +141,3 @@ NovusExpertDIn.readTimer(pin, onoff)
 ### Return
 This function returns the current time in the state defined in `onoff` parameter when executed successfully and `NX_INVALID_TIME` otherwise. **Data type**: `uint32_t`.
 
-## setPreset
-Configure the initial value for a digital input. This value depends on the digital input configured [Function type](./DigitalConfiguration.md/#Function-type).
-
-
-### Syntax
-```C
-NovusExpertDIn.setPreset(pin, preset)
-```
-
-### Parameters
-**pin**: the name of the digital input pin to read from. In NXprog the pins are `D1` to `D8` as displayed on the front panel.
-
-**preset**: the initial value for the rising edge, falling edge, and integrator ON/OFF counter. **Data type**: `uint32_t`.
-
-### Return
-This function returns `true` when executed successfully. **Data type**: `bool`.

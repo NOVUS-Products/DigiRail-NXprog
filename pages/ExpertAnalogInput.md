@@ -231,7 +231,7 @@ void loop() {
 }
 ```
 
-## setSafeVaslue
+## setSafeValue
 Configures the value to be displayed when there is an error in the configured input.
 
 ### Syntax

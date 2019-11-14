@@ -5,7 +5,7 @@ applications](https://www.nxp.com/docs/en/data-sheet/PCF2127.pdf).
 
 This library depends on Wire library that is included in NXprog platform distribution.
 
-**NOTE**: several examples are provided in this library including one to set the date and time. 
+**NOTE**: several examples are provided for this library including one to set the date and time. 
 
 ## begin
 
@@ -335,8 +335,8 @@ void loop() {
     delay(2000);
     _now = rtc.now();
     Serial.println(_now.second());
-    Serial.print("Battery low indication: ");
-    Serial.println(rtc.readBattLowFlag());
+    Serial.print("Low power mode: ");
+    Serial.println(rtc.isInLowPowerModeLowPowerMode());
 }
 ```
 
@@ -346,7 +346,7 @@ Checks if the RTC in the lowest power consumption mode.
 
 ### Syntax
 ```C
-rtc.setisInLowPowerModeLowPowerMode()
+rtc.isInLowPowerModeLowPowerMode()
 ```
 ### Parameters
 
@@ -375,7 +375,7 @@ void loop() {
     delay(2000);
     _now = rtc.now();
     Serial.println(_now.second());
-    Serial.print("Battery low indication: ");
-    Serial.println(rtc.readBattLowFlag());
+    Serial.print("Low power mode: ");
+    Serial.println(rtc.isInLowPowerModeLowPowerMode());
 }
 ```

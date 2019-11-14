@@ -89,7 +89,6 @@ The NXprog extensions to Arduino standard language provide the required function
 **Novus Expert Analog Input**
   * [setMode()](./pages/ExpertAnalogInput.md#setmode)
   * [setModeLinear()](./pages/ExpertAnalogInput.md#setmodelinear)
-  * [setRange()](./pages/ExpertAnalogInput.md#setrange)
   * [setUnit()](./pages/ExpertAnalogInput.md#setunit)
   * [enFilter()](./pages/ExpertAnalogInput.md#enfilter)
   * [setSamplingRate()](./pages/ExpertAnalogInput.md#setsamplingrate)

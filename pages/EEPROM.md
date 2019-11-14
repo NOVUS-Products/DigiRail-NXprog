@@ -19,7 +19,7 @@ eeprom.writeByte(address, data)
 
 ### Return
 
-This function returns the operation status. The return values are `WRITE_SUCESS` or `WRITE_ERROR`.
+This function returns the operation status. The return values are `WRITE_SUCCESS` or `WRITE_ERROR`.
 
 
 ### Example code
@@ -86,7 +86,7 @@ eeprom.updateByte(address, data)
 
 ### Return
 
-This function returns the operation status. The return values are `WRITE_SUCESS` or `WRITE_ERROR`.
+This function returns the operation status. The return values are `WRITE_SUCCESS` or `WRITE_ERROR`.
 
 ### Example code
 ```C
@@ -132,7 +132,7 @@ eeprom.writePage(address, size, &buffer)
 
 ### Return
 
-This function returns operation status. The return values are `WRITE_SUCESS` or `WRITE_ERROR`.
+This function returns operation status. The return values are `WRITE_SUCCESS` or `WRITE_ERROR`.
 
 ### Example code
 In this example, the string that the user types in Arduino Serial Monitor will be written in EEPROM.
