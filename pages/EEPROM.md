@@ -1,4 +1,4 @@
-# NXprog onboard EEPROM ibrary
+# NXprog onboard EEPROM library
 Arduino Library for NXprog onboard [Microchip 24LC256 256K I2C CMOS Serial EEPROM](http://ww1.microchip.com/downloads/en/devicedoc/21203m.pdf).
 This is a fork from [Gonçalo Passos library](https://github.com/gngz/24LC256-Arduino-Library/wiki).
 

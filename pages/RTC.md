@@ -336,7 +336,7 @@ void loop() {
     _now = rtc.now();
     Serial.println(_now.second());
     Serial.print("Low power mode: ");
-    Serial.println(rtc.isInLowPowerModeLowPowerMode());
+    Serial.println(rtc.isInLowPowerMode());
 }
 ```
 
@@ -346,7 +346,7 @@ Checks if the RTC in the lowest power consumption mode.
 
 ### Syntax
 ```C
-rtc.isInLowPowerModeLowPowerMode()
+rtc.isInLowPowerMode()
 ```
 ### Parameters
 
@@ -376,6 +376,6 @@ void loop() {
     _now = rtc.now();
     Serial.println(_now.second());
     Serial.print("Low power mode: ");
-    Serial.println(rtc.isInLowPowerModeLowPowerMode());
+    Serial.println(rtc.isInLowPowerMode());
 }
 ```
