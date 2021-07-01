@@ -111,6 +111,7 @@ The NXprog extensions to Arduino standard language provide the required function
   * [readCounter()](./pages/ExpertDigitalInput.md#readcounter)
   * [readTimer()](./pages/ExpertDigitalInput.md#readtimer)
   * [setPreset()](./pages/ExpertDigitalInput.md#setPreset)
+  * [applyPreset()](./pages/ExpertDigitalInput.md#applyPreset)
   
 **Novus Expert Digital Output**
   * [setMode()](./pages/ExpertDigitalOutput.md#dsetmode)

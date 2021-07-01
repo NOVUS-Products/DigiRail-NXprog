@@ -110,6 +110,20 @@ NovusExpertDIn.setPreset(pin, preset)
 ### Return
 This function returns `true` when executed successfully. **Data type**: `bool`.
 
+## applyPreset
+Apply preset value for a digital input. This function is effective for channel settings such as counter and integrator.
+
+### Syntax
+```C
+NovusExpertDIn.applyPreset(pin)
+```
+
+### Parameters
+**pin**: the name of the digital input pin to read from. In NXprog the pins are `D1` to `D8` as displayed on the front panel.
+
+### Return
+This function returns `true` when executed successfully. **Data type**: `bool`.
+
 ## readCounter
 Reads counter value for digital input, when it's set as a Counter, that is in mode `_DIN_COUNTER_RISING_EDGE` or `_DIN_COUNTER_FALLING_EDGE,` as defined in [Function type](./DigitalConfiguration.md/#Function-type).
 
