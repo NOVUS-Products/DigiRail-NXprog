@@ -133,7 +133,8 @@ The NXprog extensions to Arduino standard language provide the required function
   * [getDigiRailFWVersion()](./pages/Configuration.md#getdigirailfwversion)
 
 **Special Features**
-  * [Modbus registers](./pages/SpecialRegisters.md)
+  * [NXprog Modbus library](./pages/Modbus.md) - Device as Master (Client) / Slave (Server)
+  * [Modbus registers](./pages/SpecialRegisters.md) - For use with device in Slave (Server) mode
   * [Watchdog timer](./pages/WatchdogTimer.md)
   * [Real Time Clock](./pages/RTC.md)  
   * [EEPROM](./pages/EEPROM.md)    
