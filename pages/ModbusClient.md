@@ -53,7 +53,7 @@ void setup() {
 void loop() {
 
   Serial.print("Register value: ");
-  Serial.println(readRegister.requestFrom(DEVICE_ID, REGISTER_ADD)
+  Serial.println(readRegister(DEVICE_ID, REGISTER_ADD));
   delay(2000);
 }
 
@@ -101,13 +101,13 @@ After reading, the application must use `available` and `read` to process the re
 ### Syntax
 ```C
 int requestFrom(int type, int address, int number);
-int requestFrom(int slave_id, int type, int address,int number);
+int requestFrom(int slave_id, int type, int address, int number);
 ### Syntax
 ```
 
 ### Parameters
 **slave_id** - id of target, it is 0x00 when not specified
-**type** - type of read. Accepted values are: `COILS`, `DISCRETE_INPUTS`, `HOLD_REGISTERS`, or `INPUT_REGISTERS`
+**type** - type of read. Accepted values are: `COILS`, `DISCRETE_INPUTS`, `HOLDING_REGISTERS`, or `INPUT_REGISTERS`
 **address** - start address to use for operation
 **number** - number of values to read
 
