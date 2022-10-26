@@ -14,7 +14,7 @@ To use this library you just need to include the header:
 ```C
 #include <Modbus.h>
 ```
-###Modbus RTU Client Class
+### Modbus RTU Client (Master) Class
 
 In this mode, the NXprog may retrieve and issue commands from/to Server devices attached in RS485 interface. This mode is activated by programming NXprog in ***Bridge*** mode. It differs from the other NXprog modes, namely ***Gateway*** and ***Slave*** (aka Server), and can not be programmed by NXperience. 
 
