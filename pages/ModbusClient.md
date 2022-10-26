@@ -102,7 +102,6 @@ After reading, the application must use `available` and `read` to process the re
 ```C
 int requestFrom(int type, int address, int number);
 int requestFrom(int slave_id, int type, int address, int number);
-### Syntax
 ```
 
 ### Parameters
